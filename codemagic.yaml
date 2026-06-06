@@ -7,8 +7,13 @@ workflows:
         script: |
           npm install -g cordova
           cordova create app com.islamic.life IslamicLife
+      - name: Copy HTML
+        script: |
+          rm -rf app/www/*
+          cp index.html app/www/index.html
+      - name: Add Android
+        script: |
           cd app
-          cp ../index.html www/index.html
           cordova platform add android
       - name: Build APK
         script: |
