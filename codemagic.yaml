@@ -1,4 +1,4 @@
-hereworkflows:
+workflows:
   android-workflow:
     name: Islamic Life APK
     max_build_duration: 60
